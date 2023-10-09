@@ -1,0 +1,21 @@
+spring:
+  application:
+  rabbitmq:
+    host: ${RABBITMQ_HOST}
+    port: ${RABBITMQ_PORT}
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${CONFIG_URI}
+          username: ${CONFIG_USERNAME}
+          password: ${CONFIG_PASSWORD}
+          ignore-local-ssh-settings: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh
