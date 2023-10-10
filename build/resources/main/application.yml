@@ -1,21 +1,26 @@
 spring:
   application:
+    name: Entry-Config-Server
   rabbitmq:
-    host: ${RABBITMQ_HOST}
-    port: ${RABBITMQ_PORT}
-    username: ${RABBITMQ_USERNAME}
-    password: ${RABBITMQ_PASSWORD}
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:guest}
+    password: ${RABBITMQ_PASSWORD:guest}
   cloud:
     config:
       server:
         git:
-          uri: ${CONFIG_URI}
-          username: ${CONFIG_USERNAME}
-          password: ${CONFIG_PASSWORD}
+          uri: ${CONFIG_URI:https://github.com/EntryDSM/Equus-Cloud-Config}
+          username: ${CONFIG_USERNAME:HyunSu1768}
+          password: ${CONFIG_PASSWORD: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}
           ignore-local-ssh-settings: true
+          search-paths: config
 
 management:
   endpoints:
     web:
       exposure:
         include: health, busrefresh
+
+server:
+  port: 8888

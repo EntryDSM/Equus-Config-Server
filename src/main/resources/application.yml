@@ -1,5 +1,6 @@
 spring:
   application:
+    name: Entry-Config-Server
   rabbitmq:
     host: ${RABBITMQ_HOST}
     port: ${RABBITMQ_PORT}
@@ -13,9 +14,13 @@ spring:
           username: ${CONFIG_USERNAME}
           password: ${CONFIG_PASSWORD}
           ignore-local-ssh-settings: true
+          search-paths: config
 
 management:
   endpoints:
     web:
       exposure:
         include: health, busrefresh
+
+server:
+  port: 8888
