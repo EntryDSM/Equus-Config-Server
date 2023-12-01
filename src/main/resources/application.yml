@@ -1,11 +1,6 @@
 spring:
   application:
     name: Entry-Config-Server
-  rabbitmq:
-    host: ${RABBITMQ_HOST}
-    port: ${RABBITMQ_PORT}
-    username: ${RABBITMQ_USERNAME}
-    password: ${RABBITMQ_PASSWORD}
   cloud:
     config:
       server:
