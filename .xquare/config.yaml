@@ -2,4 +2,4 @@ config:
   name: Equus-Config-Server
   prefix: "/equus-config"
   service_type: be
-  port: 8888
+  port: 8880
