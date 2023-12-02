@@ -1,5 +1,5 @@
 config:
-  name: Equus Config Server
+  name: entry-config-server
   prefix: "/equus-config"
   service_type: be
   port: 8888
