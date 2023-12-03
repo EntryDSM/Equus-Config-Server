@@ -17,8 +17,5 @@ management:
       exposure:
         include: health, busrefresh
 
-
 server:
   port: 8888
-  servlet:
-    context-path: /equus-config
